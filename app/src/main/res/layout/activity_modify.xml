@@ -4,17 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
+    tools:context=".modifyActivity">
     <TextView
         android:id="@+id/textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="157dp"
+        android:layout_marginLeft="157dp"
         android:layout_marginBottom="14dp"
-        android:text="INVENTORY MANAGMENT"
+        android:text="TextView"
         app:layout_constraintBottom_toTopOf="@+id/name"
-        app:layout_constraintEnd_toStartOf="@+id/showbtn"
-        app:layout_constraintStart_toEndOf="@+id/textView5" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
@@ -42,11 +42,15 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="7dp"
-        android:layout_marginRight="7dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:text="month of manufacturing"
         app:layout_constraintBaseline_toBaselineOf="@+id/mom"
-        app:layout_constraintEnd_toStartOf="@+id/mom" />
+        app:layout_constraintEnd_toStartOf="@+id/mom"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView5"
@@ -64,7 +68,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
         android:layout_marginLeft="35dp"
-        android:layout_marginTop="37dp"
+        android:layout_marginTop="35dp"
         android:text="category"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
@@ -75,7 +79,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="37dp"
         android:layout_marginLeft="37dp"
-        android:layout_marginTop="41dp"
+        android:layout_marginTop="43dp"
         android:text="price"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
@@ -84,11 +88,12 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="31dp"
-        android:layout_marginLeft="31dp"
-        android:layout_marginBottom="7dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginBottom="6dp"
         android:text="quantity adding now"
         app:layout_constraintBottom_toBottomOf="@+id/quan"
+        app:layout_constraintEnd_toStartOf="@+id/quan"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -108,22 +113,24 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="31dp"
         android:layout_marginLeft="31dp"
-        android:layout_marginBottom="33dp"
+        android:layout_marginTop="123dp"
+        android:layout_marginBottom="123dp"
         android:text="expiry year"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <EditText
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:layout_marginStart="15dp"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="67dp"
         android:ems="10"
         android:hint="name"
         android:inputType="textPersonName"
+
         app:layout_constraintStart_toStartOf="@+id/textview"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -131,13 +138,13 @@
         android:id="@+id/id1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:layout_marginTop="7dp"
         android:layout_marginEnd="3dp"
         android:layout_marginRight="3dp"
         android:ems="10"
         android:hint="id"
         android:inputType="textPersonName"
+
         app:layout_constraintEnd_toEndOf="@+id/name"
         app:layout_constraintTop_toBottomOf="@+id/name" />
 
@@ -146,25 +153,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="23dp"
-        android:layout_marginEnd="17dp"
-
-        android:layout_marginRight="17dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
         android:ems="10"
         android:hint="month of manuf"
         android:inputType="textPersonName"
+
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/id1" />
 
     <EditText
         android:id="@+id/yom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="23dp"
-        android:layout_marginRight="23dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
         android:ems="10"
         android:hint="year of manuf"
+
         android:inputType="numberSigned"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mom" />
@@ -173,12 +181,12 @@
         android:id="@+id/cate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:layout_marginTop="12dp"
         android:layout_marginEnd="2dp"
         android:layout_marginRight="2dp"
         android:ems="10"
         android:hint="cate"
+
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="@+id/yom"
         app:layout_constraintTop_toBottomOf="@+id/yom" />
@@ -187,101 +195,68 @@
         android:id="@+id/price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="3dp"
-        android:layout_marginRight="3dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="15dp"
         android:ems="10"
         android:hint="price"
+
         android:inputType="numberSigned"
-        app:layout_constraintEnd_toEndOf="@+id/cate"
-        app:layout_constraintTop_toBottomOf="@+id/cate" />
+        app:layout_constraintBottom_toTopOf="@+id/quan"
+        app:layout_constraintEnd_toEndOf="@+id/quan" />
 
     <EditText
         android:id="@+id/quan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="22dp"
-        android:layout_marginRight="22dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="28dp"
         android:ems="10"
         android:hint="new quantity"
+
         android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/moe"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/price" />
+        app:layout_constraintStart_toEndOf="@+id/textView8" />
 
     <EditText
         android:id="@+id/moe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
-        android:layout_marginTop="19dp"
-        android:layout_marginEnd="27dp"
-        android:layout_marginRight="27dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginRight="29dp"
+        android:layout_marginBottom="24dp"
         android:ems="10"
         android:hint="month of exp"
+
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/quan" />
+        app:layout_constraintBottom_toTopOf="@+id/yoe"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
         android:id="@+id/yoe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginBottom="117dp"
         android:ems="10"
         android:hint="year of exp"
+
         android:inputType="numberSigned"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/moe" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginBottom="40dp"
-        android:onClick="submit_method"
+        android:layout_marginStart="130dp"
+        android:layout_marginLeft="130dp"
+        android:layout_marginBottom="27dp"
         android:text="SUBMIT"
+        android:onClick="modify_method"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="6dp"
-        android:layout_marginLeft="6dp"
-        android:onClick="nextActivity"
-        android:text="modify"
-        app:layout_constraintBaseline_toBaselineOf="@+id/submit"
-        app:layout_constraintStart_toEndOf="@+id/submit" />
-
-    <Button
-        android:id="@+id/showbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="6dp"
-        android:layout_marginRight="6dp"
-        android:onClick="show_method"
-        android:text="show"
-        app:layout_constraintEnd_toStartOf="@+id/searchbtn"
-        app:layout_constraintTop_toTopOf="@+id/button2" />
-
-    <Button
-        android:id="@+id/searchbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="9dp"
-        android:layout_marginRight="9dp"
-        android:text="search"
-        app:layout_constraintBaseline_toBaselineOf="@+id/showbtn"
-        android:onClick="search_method"
-        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

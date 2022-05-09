@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".showActivity">
+
+    <ScrollView
+        android:layout_width="409dp"
+        android:id="@+id/svl"
+        android:layout_height="729dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lll"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/show"
+                android:onClick="show_method"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="show" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
